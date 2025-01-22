@@ -1,25 +1,31 @@
+// Abstract class Account representing a bank account
 // Classe abstrata Account que representa uma conta bancária
 public abstract class Account {
+    // Account balance
     // Saldo da conta
-    protected double saldo;
+    protected double balance;
 
+    // Constructor initializing the initial account balance
     // Construtor que inicializa o saldo inicial da conta
-    public Account(double saldoInicial) {
-        this.saldo = saldoInicial;
+    public Account(double initialBalance) {
+        this.balance = initialBalance;
     }
 
+    // Method returning the current account balance
     // Método que retorna o saldo atual da conta
-    public double getSaldo() {
-        return saldo;
+    public double getBalance() {
+        return balance;
     }
 
+    // Method to deposit an amount into the account, if the amount is positive
     // Método que deposita um valor na conta, se o valor for positivo
-    public void depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
         }
     }
 
+    // Abstract method for withdrawal, to be implemented by subclasses
     // Método abstrato para saque, que deve ser implementado pelas subclasses
-    public abstract boolean sacar(double valor);
+    public abstract boolean withdraw(double amount);
 }

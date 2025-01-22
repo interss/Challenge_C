@@ -1,37 +1,47 @@
+<!-- Maven project definition -->
 <!-- Definição do projeto Maven -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://www.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Basic project information -->
     <!-- Informações básicas do projeto -->
     <groupId>com.bank</groupId>
     <artifactId>banking-system</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- Build configuration -->
     <!-- Configuração do build -->
     <build>
         <plugins>
+            <!-- AspectJ plugin for aspect compilation -->
             <!-- Plugin do AspectJ para compilação de aspectos -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
                 <version>1.11</version>
                 <configuration>
-                    <complianceLevel>1.8</complianceLevel> <!-- Nível de conformidade do Java -->
-                    <source>1.8</source> <!-- Versão do código-fonte -->
-                    <target>1.8</target> <!-- Versão do bytecode -->
+                    <complianceLevel>1.8</complianceLevel> <!-- Java compliance level -->
+                    <!-- Nível de conformidade do Java -->
+                    <source>1.8</source> <!-- Source version -->
+                    <!-- Versão do código-fonte -->
+                    <target>1.8</target> <!-- Bytecode version -->
+                    <!-- Versão do bytecode -->
                     <aspectLibraries>
                         <aspectLibrary>
                             <groupId>org.aspectj</groupId>
-                            <artifactId>aspectjrt</artifactId> <!-- Biblioteca de runtime do AspectJ -->
+                            <artifactId>aspectjrt</artifactId> <!-- AspectJ runtime library -->
+                            <!-- Biblioteca de runtime do AspectJ -->
                         </aspectLibrary>
                     </aspectLibraries>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>compile</goal> <!-- Objetivo de compilação -->
-                            <goal>test-compile</goal> <!-- Objetivo de compilação de testes -->
+                            <goal>compile</goal> <!-- Compilation goal -->
+                            <!-- Objetivo de compilação -->
+                            <goal>test-compile</goal> <!-- Test compilation goal -->
+                            <!-- Objetivo de compilação de testes -->
                         </goals>
                     </execution>
                 </executions>
