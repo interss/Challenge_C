@@ -82,9 +82,3 @@ banking-system
 
 Contributions are welcome! Feel free to open issues or pull requests for improvements and fixes.  
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias e correções.  
-
-Copiar
-
-Escutar
-Regerar
-Continuar
